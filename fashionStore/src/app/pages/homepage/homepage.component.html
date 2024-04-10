@@ -1,0 +1,14 @@
+<main>
+  <h3>Produtos em destaque</h3>
+  <ul>
+    <li *ngFor="let product of productList">
+      <img [src]="product.img" [alt]="product.name" />
+      <h3>{{ product.name }}</h3>
+      <span>{{ product.price }}</span>
+      <div>
+        <button>Adicionar ao Carrinho!</button>
+        <a [routerLink]="productURL(product.id)">Saiba Mais</a>
+      </div>
+    </li>
+  </ul>
+</main>

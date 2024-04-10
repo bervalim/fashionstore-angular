@@ -1,0 +1,13 @@
+<main>
+  <div *ngIf="product">
+    <div>
+      <a routerLink="/">Home</a> > <span>{{ product.name }}</span>
+    </div>
+    <img [src]="product.img" [alt]="product.name" />
+    <h3>{{ product.name }}</h3>
+    <span>{{ product.price }}</span>
+    <p>Lorem Ipsum</p>
+    <button>Adicionar ao Carrinho!</button>
+  </div>
+  <p *ngIf="!product">Carregando...</p>
+</main>
